@@ -1,11 +1,11 @@
 package akka.persistence.journal.leveldb
 
-import com.typesafe.config.ConfigFactory
-
-import akka.persistence.journal.LegacyJournalSpec
+import akka.persistence.journal.JournalSpec
 import akka.persistence.PluginCleanup
 
-class LeveldbJournalNativeSpec extends LegacyJournalSpec with PluginCleanup {
+import com.typesafe.config.ConfigFactory
+
+class LeveldbJournalNativeSpec extends JournalSpec with PluginCleanup {
   lazy val config = ConfigFactory.parseString(
     """
       |akka.persistence.journal.plugin = "akka.persistence.journal.leveldb"
